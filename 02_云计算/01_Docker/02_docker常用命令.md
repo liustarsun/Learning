@@ -1,11 +1,11 @@
 # 搭建自己的docker开发环境
 ------
 ## 1. docker启动过程
-1.Docker客户端执行**docker run**命令     
-2.Docker daemon发现本地没有镜像    
-3.daemon从Docker Hub下载镜像    
-4.下载完成，镜像被保存在本地     
-5.Docker daemon启动容器    
+1. Docker客户端执行**docker run**命令     
+2. Docker daemon发现本地没有镜像    
+3. daemon从Docker Hub下载镜像    
+4. 下载完成，镜像被保存在本地     
+5. Docker daemon启动容器    
 
 ## 2. docker常用命令
 ```
