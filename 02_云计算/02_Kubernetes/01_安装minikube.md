@@ -1,11 +1,12 @@
-## **Ubuntu系统安装minikube**
+# **Ubuntu系统安装minikube**
 > 前提是要有hypervisor，如virtualbox; 要有kubectl; 来自官网链接[点我](https://kubernetes.io/docs/tasks/tools/install-minikube/)
 
-#### **第一步：安装virtualbox**
+## 1. 安装virtualbox
 ```
 asb@HP8300:~$ proxychains4 apt-get install virtualbox
 ```
-#### **第二步：安装kubectl**
+
+## 2. 安装kubectl
 ```
 // 不要使用root权限
 xingyanl@xy:~$ proxychains4 curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.9.0/bin/linux/amd64/kubectl
@@ -13,7 +14,7 @@ xingyanl@xy:~$ chmod +x ./kubectl
 xingyanl@xy:~$ sudo mv ./kubectl /usr/local/bin/kubectl
 ```
 
-#### **第三步：安装minikube**
+## 3. 安装minikube
 ```
 // 下载linux版本minikube
 xingyanl@xy:~$ proxychains4 curl -Lo minikube curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.24.1/minikube-linux-amd64
@@ -61,9 +62,6 @@ Client Version: version.Info{Major:"1", Minor:"9", GitVersion:"v1.9.0", GitCommi
 Server Version: version.Info{Major:"1", Minor:"8", GitVersion:"v1.8.0", GitCommit:"0b9efaeb34a2fc51ff8e4d34ad9bc6375459c4a4", GitTreeState:"clean", BuildDate:"2017-11-29T22:43:34Z", GoVersion:"go1.9.1", Compiler:"gc", Platform:"linux/amd64"}
 asb@HP8300:~$ 
 
-
-
-
 // 成功的下载一次
 asb@HP8300:~$ minikube start --vm-driver=virtualbox --docker-env HTTP_PROXY=http://135.245.48.34:8000/  --docker-env HTTPS_PROXY=http://135.245.48.34:8000/========================================
 kubectl could not be found on your path. kubectl is a requirement for using minikube
@@ -108,7 +106,6 @@ Starting cluster components...
 Kubectl is now configured to use the cluster.
 Loading cached images from config file.
 asb@HP8300:~$  
-
 
 asb@HP8300:~$ minikube stop
 ========================================
@@ -169,7 +166,7 @@ asb@HP8300:~$ kubectl run --image=nginx nginx-app --port=80
 error: failed to discover supported resources: Get https://192.168.99.101:8443/api: Tunnel Connection Failed
 ```
 
-#### **遇到的问题**
+## 4. 遇到的问题
 ```
 // 问题1：
 Error starting host: Error attempting to cache minikube ISO from URL: Error downloading Minikube ISO: failed to download: failed to download to temp file: download failed: 5 error(s) occurred:
@@ -204,7 +201,3 @@ export https_proxy="socks5://135.251.123.122:9900"
 #export DOCKER_TMPDIR="/mnt/bigdrive/docker-tmp"
 asb@HP8300:~$
 ```
-
-
-============
-
