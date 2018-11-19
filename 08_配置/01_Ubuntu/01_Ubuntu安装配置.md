@@ -251,6 +251,7 @@ asb@HP8300:~$ sudo proxychains4 apt-get update
 asb@HP8300:~$ sudo proxychains4 apt-get upgrade
 ```
 
+------
 ### 3.1 配置网卡
 ```
 asb@HP8300:~$ sudo /etc/init.d/networking restart
