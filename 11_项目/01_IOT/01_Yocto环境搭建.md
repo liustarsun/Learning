@@ -108,3 +108,49 @@ Target: arm-poky-linux-gnueabi
 Thread model: posix
 gcc version 6.2.0 (GCC) 
 ```
+
+
+
+------
+# 1. 简介
+1. Yocto是开源项目的名称，项目的目标是构建自定义Linux系统
+2. Poky有两个含义。
+- 第一个含义是用来构建Linux的构建系统，值得注意的该Poky仅仅是一个概念，而非一个实体：它包含了 BitBake工具、编译工具链、BSP、诸多程序包或层，可以认为Poky即是Yocto的本质
+- 此外Poky还有另外一层意思，使用Poky系统得到的默认参考 Linux 发行版也叫Poky（当然，我们可以对此发行版随意命名）。Poky的两个含义千万不能混淆 
+
+```
+[chunxixi@hzlinb27 hangzhou_AEQB]$ ls -lrt
+total 84
+-rw-r--r--  1 chunxixi linseeusers_lte_wroclaw 2709 Dec 17 10:39 README.md
+drwxr-xr-x  2 chunxixi linseeusers_lte_wroclaw 4096 Dec 17 10:39 project-configs
+-rw-r--r--  1 chunxixi linseeusers_lte_wroclaw 2831 Dec 17 10:39 manifest.xml
+-rw-r--r--  1 chunxixi linseeusers_lte_wroclaw 2242 Dec 17 10:39 env.conf
+-rw-r--r--  1 chunxixi linseeusers_lte_wroclaw  307 Dec 17 10:39 build.env
+drwxr-xr-x  4 chunxixi linseeusers_lte_wroclaw 4096 Dec 17 10:39 env-scripts
+drwxr-xr-x 11 chunxixi linseeusers_lte_wroclaw 4096 Dec 17 10:39 meta-5g-layer-1
+drwxr-xr-x 10 chunxixi linseeusers_lte_wroclaw 4096 Dec 17 10:39 meta-altera-bringup
+drwxr-xr-x  5 chunxixi linseeusers_lte_wroclaw 4096 Dec 17 10:39 meta-bsp-made
+drwxr-xr-x  9 chunxixi linseeusers_lte_wroclaw 4096 Dec 17 10:39 meta-bsp-rfsw-common
+drwxr-xr-x  6 chunxixi linseeusers_lte_wroclaw 4096 Dec 17 10:39 meta-fpga-bitstream
+drwxr-xr-x  5 chunxixi linseeusers_lte_wroclaw 4096 Dec 17 10:39 meta-kernel-modules-gp
+drwxr-xr-x  8 chunxixi linseeusers_lte_wroclaw 4096 Dec 17 10:39 meta-l1low
+drwxr-xr-x  9 chunxixi linseeusers_lte_wroclaw 4096 Dec 17 10:39 meta-middleware
+drwxr-xr-x  7 chunxixi linseeusers_lte_wroclaw 4096 Dec 17 10:39 meta-rfsw-ccs
+drwxr-xr-x  8 chunxixi linseeusers_lte_wroclaw 4096 Dec 17 10:39 meta-rfsw-common
+drwxr-xr-x  7 chunxixi linseeusers_lte_wroclaw 4096 Dec 17 10:39 meta-rfsw-drivers-business
+drwxr-xr-x 11 chunxixi linseeusers_lte_wroclaw 4096 Dec 17 10:39 meta-rfsw-gp
+drwxr-xr-x  7 chunxixi linseeusers_lte_wroclaw 4096 Dec 17 10:39 meta-socsw
+drwxr-xr-x 11 chunxixi linseeusers_lte_wroclaw 4096 Dec 17 10:39 poky
+drwxr-xr-x  7 chunxixi linseeusers_lte_wroclaw 4096 Dec 17 11:23 made
+```
+
+# 2. 架构
+
+# 3. 配置文件
+- 以AEQB为例
+
+# 4. patch
+
+# 5. 编译流程
+
+# 6. 其他
